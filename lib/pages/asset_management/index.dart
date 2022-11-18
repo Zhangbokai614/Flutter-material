@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IndexPage extends StatelessWidget {
-  const IndexPage({super.key});
+class AssetManagementPage extends StatelessWidget {
+  const AssetManagementPage({super.key});
 
   @override
   Widget build(BuildContext context) {
