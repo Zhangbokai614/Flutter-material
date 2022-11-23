@@ -1,87 +1,62 @@
 import 'package:flutter/material.dart';
 
-class _MenuContent {
-  const _MenuContent({
-    required this.title,
-    this.icon = null,
-    this.action,
-    this.background = false,
-    this.children,
-  });
-
-  final String title;
-  final IconData? icon;
-  final Widget? action;
-  final bool? background;
-  final List<String>? children;
-}
+import '../../widgets/drop_down_menu.dart';
 
 class PageLeft extends StatelessWidget {
   PageLeft({super.key});
 
-  final List<_MenuContent> _menuContent = [
-    const _MenuContent(
+  final List<MenuContent> _menuContent = [
+    const MenuContent(
       icon: Icons.grid_view_rounded,
       title: 'Overview',
       background: true,
     ),
-    const _MenuContent(
+    const MenuContent(
       icon: Icons.analytics_outlined,
       title: 'Analytics',
     ),
-    const _MenuContent(
+    const MenuContent(
       icon: Icons.wallet_outlined,
       title: 'Transaction',
+      messages: 2,
     ),
-    const _MenuContent(
+    const MenuContent(
       icon: Icons.add_card_outlined,
       title: 'Card',
+      messages: 3,
       children: [
         'Personal card',
         'Business card',
       ],
     ),
-    const _MenuContent(
+    const MenuContent(
       icon: Icons.money,
       title: 'Payment',
     ),
-    const _MenuContent(
+    const MenuContent(
       icon: Icons.currency_exchange_rounded,
       title: 'Currency exchange',
+    ),
+    const MenuContent(
+      title: 'Account',
+      separateHeadings: true,
+    ),
+    const MenuContent(
+      icon: Icons.settings,
+      title: 'Settings',
+    ),
+    const MenuContent(
+      icon: Icons.manage_accounts_rounded,
+      title: 'Manage card',
+    ),
+    const MenuContent(
+      icon: Icons.phone,
+      title: 'Call center',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).colorScheme.secondary,
-      padding: const EdgeInsets.only(left: 32, right: 24, top: 32),
-      child: ListView.builder(
-        itemCount: _menuContent.length,
-        itemExtent: 82,
-        itemBuilder: (BuildContext context, int index) {
-          return Row(
-            children: [
-              Offstage(
-                offstage: _menuContent[index].icon == null,
-                child: Icon(
-                  _menuContent[index].icon,
-                  size: Theme.of(context).textTheme.headline6!.fontSize,
-                  color: Theme.of(context).textTheme.headline6!.color,
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(left: 16),
-                child: Text(
-                  _menuContent[index].title,
-                  style: Theme.of(context).textTheme.headline6,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
-          );
-        },
-      ),
-    );
+    return DropDownMenu(menu: _menuContent);
   }
 }

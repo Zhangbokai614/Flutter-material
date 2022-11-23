@@ -16,6 +16,7 @@ class AssetManagementPage extends StatelessWidget {
         colorScheme: const ColorScheme.light().copyWith(
           primary: Colors.white,
           secondary: const Color(0xff1b1b1b),
+          secondaryContainer: const Color(0xff323232),
           onSecondary: const Color(0xff181818),
           tertiary: const Color(0xffff2424),
           onTertiary: const Color(0xff54b992),
@@ -30,6 +31,7 @@ class AssetManagementPage extends StatelessWidget {
           ),
           headline6: TextStyle(
             color: Color(0xffe6e6e6),
+            fontWeight: FontWeight.w400,
           ),
           subtitle1: TextStyle(
             color: Color(0xff9b9b9b),
