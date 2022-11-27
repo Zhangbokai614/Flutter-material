@@ -3,7 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 
 import '../../widgets/calculation_card.dart';
 import '../../widgets//title_card.dart';
-import '../../widgets/line_char.dart';
+import '../../widgets/line_chart.dart';
 import '../../widgets/bill_table.dart';
 
 class PageMiddle extends StatelessWidget {
