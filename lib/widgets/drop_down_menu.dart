@@ -162,7 +162,7 @@ class _Menu extends StatelessWidget {
                       ),
                     )
                   : Icon(
-                      Icons.keyboard_arrow_down_outlined,
+                      Icons.keyboard_arrow_down_rounded,
                       color: Theme.of(context).colorScheme.primary,
                       size: Theme.of(context).textTheme.headline6?.fontSize,
                     ),

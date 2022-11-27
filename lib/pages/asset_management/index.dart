@@ -23,11 +23,13 @@ class AssetManagementPage extends StatelessWidget {
           background: const Color(0xfff7f7f7),
         ),
         textTheme: const TextTheme(
-          headline3: TextStyle(
+          headline4: TextStyle(
             color: Color(0xff101828),
+            fontWeight: FontWeight.w600,
           ),
           headline5: TextStyle(
             color: Color(0xff101828),
+            fontWeight: FontWeight.w600,
           ),
           headline6: TextStyle(
             color: Color(0xffe6e6e6),
@@ -38,13 +40,14 @@ class AssetManagementPage extends StatelessWidget {
           ),
           subtitle2: TextStyle(
             color: Color(0xff5b606b),
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
       child: HeadRowThreeParts(
         top: PageTop(),
         left: PageLeft(),
-        middle: PageMiddle(),
+        middle: const PageMiddle(),
         right: PageRight(),
       ),
     );
