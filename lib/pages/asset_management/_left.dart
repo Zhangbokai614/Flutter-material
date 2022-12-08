@@ -48,6 +48,14 @@ class PageLeft extends StatelessWidget {
     const MenuContent(
       icon: Icons.manage_accounts_rounded,
       title: 'Manage card',
+      children: [
+        'Testing',
+        'Testing',
+        'Testing',
+        'Testing',
+        'Testing',
+        'Testing',
+      ],
     ),
     const MenuContent(
       icon: Icons.phone,
@@ -57,6 +65,9 @@ class PageLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DropDownMenu(menu: _menuContent);
+    return DropDownMenu(
+      menu: _menuContent,
+      collBack: (item, index) => {print('${item}: ${index}')},
+    );
   }
 }
