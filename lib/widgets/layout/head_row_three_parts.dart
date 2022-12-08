@@ -24,7 +24,8 @@ class HeadRowThreeParts extends StatelessWidget {
         Expanded(
           flex: flex[0],
           child: _ShadowBox(
-            child: top,
+            child:
+                top ?? Container(color: Theme.of(context).colorScheme.primary),
           ),
         ),
         Expanded(
@@ -35,23 +36,23 @@ class HeadRowThreeParts extends StatelessWidget {
               Expanded(
                 flex: flex[2],
                 child: _ShadowBox(
-                  child: left,
+                  child: left ??
+                      Container(color: Theme.of(context).colorScheme.primary),
                 ),
               ),
               Expanded(
                 flex: flex[3],
                 child: _ShadowBox(
                   child: middle ??
-                      Flexible(
-                        child: Container(
-                            color: Theme.of(context).colorScheme.background),
-                      ),
+                      Container(
+                          color: Theme.of(context).colorScheme.background),
                 ),
               ),
               Expanded(
                 flex: flex[4],
                 child: _ShadowBox(
-                  child: right,
+                  child: right ??
+                      Container(color: Theme.of(context).colorScheme.primary),
                 ),
               ),
             ],
@@ -81,7 +82,7 @@ class _ShadowBox extends StatelessWidget {
           ),
         ],
       ),
-      child: child,
+      child: child ?? Container(),
     );
   }
 }
